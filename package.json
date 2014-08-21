@@ -1,0 +1,28 @@
+{
+  "name": "hopesoap",
+  "version": "0.0.1",
+  "description": "hopesoap website",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kotse/hopesoap.git"
+  },
+  "keywords": [
+    "hopesoap"
+  ],
+  "author": "brani niki kotse proxiad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotse/hopesoap/issues"
+  },
+  "homepage": "https://github.com/kotse/hopesoap",
+
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }  
+}
