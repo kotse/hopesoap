@@ -36,10 +36,16 @@
 
     <section id="soaps" class="content-section">
         <div class="container container-relative">
+
+            <div class="col-md-2">
+                <h5>Търсене: </h5>
+                <input ng-model="query">
+            </div>
+
             <div class="col-md-8">
                 <ul>
-                    <li ng-repeat="soap in soaps">
-                      {{soap.name}}
+                    <li ng-repeat="soap in soaps | filter:query">
+                      <h4>{{soap.name}}</h4>
                       <p>{{soap.description}}</p>
                     </li>
                 </ul>
