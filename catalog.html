@@ -32,7 +32,21 @@
 
 </head>
 
-<body>
+<body ng-app="hopeSoapApp" ng-controller="SoapListCtrl">
+
+    <section id="soaps" class="content-section">
+        <div class="container container-relative">
+            <div class="col-md-8">
+                <ul>
+                    <li ng-repeat="soap in soaps">
+                      {{soap.name}}
+                      <p>{{soap.description}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer>
@@ -50,12 +64,12 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Angular -->
+    <!-- Angular stuff -->
     <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
 </body>
-
 </html>
