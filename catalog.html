@@ -40,12 +40,19 @@
             <div class="col-md-2">
                 <h5>Търсене: </h5>
                 <input ng-model="query">
+
+                <h5>Подреди по:</h5>
+                <select ng-model="orderProp">
+                    <option value="name">Азбучен ред</option>
+                    <option value="createdAt">Най-нов</option>
+                </select>
             </div>
 
             <div class="col-md-8">
                 <ul>
-                    <li ng-repeat="soap in soaps | filter:query">
+                    <li ng-repeat="soap in soaps | filter:query | orderBy:orderProp">
                       <h4>{{soap.name}}</h4>
+                      <h6>Добавен на {{soap.createdAt}}</h6>
                       <p>{{soap.description}}</p>
                     </li>
                 </ul>
