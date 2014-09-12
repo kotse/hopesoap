@@ -8,8 +8,8 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          // target.css file: source.less file
-          "css/grayscale.css": "less/grayscale.less",
+          // target.css file: source.less file 
+          "css/hopesoap.css": "less/hopesoap.less",
         }
       }
     },
