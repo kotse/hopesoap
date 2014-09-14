@@ -58,13 +58,13 @@ a {
 
 .light {
     font-weight: 400;
+    color: @light;
 }
 
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid fade(@light, 30%);
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @background-def;
     .navbar-brand {
         font-weight: 700;
         &:focus {
@@ -102,6 +102,10 @@ a {
             }
         }
     }
+}
+
+.navbar-custom-catalog {
+    border-bottom: none;
 }
 
 .page-scroll.navbar-right-custom {

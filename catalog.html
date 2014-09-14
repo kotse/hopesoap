@@ -32,7 +32,25 @@
 
 </head>
 
-<body ng-app="hopeSoapApp" ng-controller="SoapListCtrl">
+<body ng-app="hopeSoapApp" ng-controller="SoapListCtrl" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">
+                    <i class="fa fa-backward"></i>  <span class="light">Обратно към </span> HOPeSOAP
+                </a>
+            </div>
+
+            <div class="navbar-right navbar-custom navbar-custom-catalog navbar-brand light">
+                Каталог
+            </div>
+        </div>
+    </nav>
 
     <section id="soaps" class="content-section">
         <div class="container container-relative">
@@ -81,9 +99,5 @@
     <!-- Angular stuff -->
     <script src="js/angular.js"></script>
     <script src="js/controllers.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
 </body>
 </html>
