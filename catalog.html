@@ -56,18 +56,22 @@
         <div class="container container-relative">
 
             <div class="col-md-2 soaps">
-                <div class="categories">
-                    <b>Покажи ми:</b>
+                <div class="order-box">
+
+                <!-- TODO:remove categories, reuse just order-box, rename order-box class! -->
+                    <p class='order-box-title'>
+                        <span class="left">Покажи ми</span>
+                    </p>
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
                         <label>
                             <input type="checkbox" checked="checked"> {{category}}
                         </label>
                     </div>                
-                </div>
 
-                <div class="categories-sort">
-                    <b>Подреди по:</b><br>
+                    <p class='order-box-title'>
+                        <span class="left">Подреди по</span>
+                    </p>
 
                     <input type="radio" class="sort-by" name="sort" value="price" checked="true"><span class='sort-by-text'>Цена</span><br>
                     <input type="radio" class="sort-by" name="sort" value="createdAt"><span class='sort-by-text'>Последно добавен</span>
