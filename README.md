@@ -23,20 +23,20 @@ HOPeSOAP website
 
 ### TODO ###
 
-1) Make it a proper node project, not just a bunch of html/css
+1. Make it a proper node project, not just a bunch of html/css
 
-2) Clean up less/css (in progress - Kotse, ongoing)
+1. Clean up less/css (in progress - Kotse, ongoing)
 
-3) Add admin page
+1. Add admin page
 
-4) Figure out a way to upload images
+1. Figure out a way to upload images
 
-5) Resize all images (main background on the first "page", also for the catalog after)
+1. Resize all images (main background on the first "page", also for the catalog after)
 
-6) Finish catalog design (partially completed, still in progress - Kotse)
+1. Finish catalog design (partially completed, still in progress - Kotse)
 
-7) Add a cart functionality to the catalog
+1. Add a cart functionality to the catalog
 
-8) Integrate catalog in the website in a better way
+1. Integrate catalog in the website in a better way
 
-9) Push ot heroku for demo purposes
+1. Push ot heroku for demo purposes
