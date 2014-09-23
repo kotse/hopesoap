@@ -114,6 +114,132 @@ a {
     font-size: 16px;
 }
 
+//TODO: mix categories and items for catalog - they have a lot in common
+.catalog-categories {
+    border: solid 2px gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.catalog-categories-title {
+    text-align: center;
+    border-bottom: 1px solid #888888;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.checkbox-categories {
+    padding-left: 5px;
+}
+
+
+.catalog-item {
+    img { border: solid 1px;}   
+
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.catalog-title {
+    font-size: 16px;
+}
+
+.soaps {
+    float: left;
+    font-size: 14px;
+/*    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        overflow: auto;
+    }
+*/
+    
+
+    .categories {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .order-box {
+        font-weight: bold;
+        font-size: 12px;
+
+        .order-box-title {
+            background-color: @background-nav-top;
+            overflow: auto;
+            font-size: 14px;
+            color: #fff;
+            min-width: 150px;   
+        }
+
+        .order-box-total {
+            background-color: @background-nav-top;
+            overflow: auto;
+            color: #fff;
+            min-width: 150px;   
+        }
+
+        p {
+            padding-right: 10px;
+            padding-left: 5px;
+        }
+
+        .order-item {
+            display: inline;
+            /*float: left;*/
+            padding: 0px 5px 5px;
+        }
+    }
+
+    .categories-sort {
+        margin-top:5px;
+
+        .sort-by {
+            margin-left: 5px;
+        }
+        .sort-by-text {
+            margin-left: 7px;
+        }
+    }
+
+    .soap-info {
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    img { 
+        border: solid 1px;
+        margin-right: 15px;
+        width: 180px;
+        height: 120px;
+    }
+
+    h4 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+}
+
 #social-facebook {
     position: absolute;
     top: 1.25rem;
@@ -357,4 +483,14 @@ body {
 .paragraph-small {
     font-size: 16px;
     font-style: italic;
+}
+
+.left {
+    display: inline;
+    float: left;
+}
+
+.right {
+    display: inline;
+    float: right;
 }

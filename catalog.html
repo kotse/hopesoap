@@ -52,29 +52,70 @@
         </div>
     </nav>
 
-    <section id="soaps" class="content-section">
+    <section class="content-section">
         <div class="container container-relative">
 
-            <div class="col-md-2">
-                <h5>Търсене: </h5>
-                <input ng-model="query">
+            <div class="col-md-2 soaps">
+                <div class="categories">
+                    <b>Покажи ми:</b>
 
-                <h5>Подреди по:</h5>
-                <select ng-model="orderProp">
-                    <option value="name">Азбучен ред</option>
-                    <option value="createdAt">Най-нов</option>
-                </select>
+                    <div class="checkbox checkbox-categories" ng-repeat="category in categories">
+                        <label>
+                            <input type="checkbox" checked="checked"> {{category}}
+                        </label>
+                    </div>                
+                </div>
+
+                <div class="categories-sort">
+                    <b>Подреди по:</b><br>
+
+                    <input type="radio" class="sort-by" name="sort" value="price" checked="true"><span class='sort-by-text'>Цена</span><br>
+                    <input type="radio" class="sort-by" name="sort" value="createdAt"><span class='sort-by-text'>Последно добавен</span>
+                </div>
             </div>
 
             <div class="col-md-8">
-                <ul>
-                    <li ng-repeat="soap in soaps | filter:query | orderBy:orderProp">
-                      <h4>{{soap.name}}</h4>
-                      <h6>Добавен на {{soap.createdAt}}</h6>
-                      <img ng-src="{{soap.imageUrl}}">
-                      <p>{{soap.description}}</p>
-                    </li>
-                </ul>
+                <div class='row-fluid'>
+                    <div ng-repeat="soap in soaps" class='soaps'>
+                        <div class="soap-img">
+                            <img ng-src="{{soap.imageUrl}}">
+                        </div>
+                        <div class="soap-info">
+                            {{soap.name}}
+                        </div>
+                        <p>
+                            <center>
+                                {{soap.price}} лв. - 1 брой
+                            </center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 soaps">
+                <div class="order-box">
+                    <p class='order-box-title'>
+                        <span class="left">Вашата поръчка</span>
+                    </p>
+
+                    <div ng-repeat="order in orders">
+                        <!-- <ul>
+                            <li>{{order.name}}</li>
+                            <li>{{order.count}} бр.</li>
+                            <li>{{order.total}} лв.</li>
+                        </ul> -->
+                            <span class="left">{{order.name}}</span>
+                            <span class="right">{{order.price}} лв.</span><br/>
+                            <span class="left">{{order.count}} бр.</span>
+                            <span class="right">{{order.total}} лв.</span>
+                    </div>
+
+                    <p class='order-box-total'>
+                        <span class="left">Общо:</span>
+                        <span class="right">13 лв</span>
+                    </p>
+                </div>
+                <button type="button" class="btn btn-default right">Поръчай</button>
             </div>
         </div>
     </section>
