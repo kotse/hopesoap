@@ -56,20 +56,18 @@
         <div class="container container-relative">
 
             <div class="col-md-2 soaps">
-                <div class="order-box">
-
-                <!-- TODO:remove categories, reuse just order-box, rename order-box class! -->
-                    <p class='order-box-title'>
+                <div class="soap-box">
+                    <p class='soap-box-title'>
                         <span class="left">Покажи ми</span>
                     </p>
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
-                        <label class=order-box>
+                        <label class=soap-box>
                             <input type="checkbox" checked="checked"> {{category}}
                         </label>
                     </div>                
 
-                    <p class='order-box-title'>
+                    <p class='soap-box-title'>
                         <span class="left">Подреди по</span>
                     </p>
 
@@ -97,28 +95,23 @@
             </div>
 
             <div class="col-md-2 soaps">
-                <div class="order-box">
-                    <p class='order-box-title'>
+                <div class="soap-box">
+                    <p class='soap-box-title'>
                         <span class="left">Вашата поръчка</span>
                     </p>
 
-                    <div class="order-box-items" ng-repeat="order in orders">
-                        <!-- <ul>
-                            <li>{{order.name}}</li>
-                            <li>{{order.count}} бр.</li>
-                            <li>{{order.total}} лв.</li>
-                        </ul> -->
-                            <span class="left">{{order.name}}</span>
-                            <span class="right">x {{order.price}} лв.</span><br/>
-                            <span class="left">{{order.count}} бр.</span> 
-                            <span class="order-box-quantity left">
-                                <a href='#'><i class='fa fa-minus-square-o'></i></a>
-                                <a href='#'><i class='fa fa-plus-square-o'></i></a>
-                            </span>
-                            <span class="right">= {{order.total}} лв.</span>
+                    <div class="soap-box-items" ng-repeat="order in orders">
+                        <span class="left">{{order.name}}</span>
+                        <span class="right">x {{order.price}} лв.</span><br/>
+                        <span class="left">{{order.count}} бр.</span> 
+                        <span class="soap-box-quantity left">
+                            <a href='#'><i class='fa fa-minus-square-o'></i></a>
+                            <a href='#'><i class='fa fa-plus-square-o'></i></a>
+                        </span>
+                        <span class="right">= {{order.total}} лв.</span>
                     </div>
 
-                    <p class='order-box-total'>
+                    <p class='soap-box-total'>
                         <span class="left">Общо</span>
                         <span class="right">= 18 лв</span>
                     </p>
@@ -127,7 +120,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
