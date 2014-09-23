@@ -1,9 +1,15 @@
-hopesoap
+HOPeSOAP website
 ========
 
-HOPeSOAP website
+### How to run ###
+```
+#!bash
 
-some tasks to be completed:
+~> npm install
+~> grunt
+```
+
+### TODO ###
 
 1) make it a proper node project, not just a bunch of html/css
 
