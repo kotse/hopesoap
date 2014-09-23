@@ -13,9 +13,9 @@ some tasks to be completed:
 
 4) figure out a way to upload images
 
-5) resize all images (main background on the first "page")
+5) resize all images (main background on the first "page", also for the catalog after)
 
-6) finish catalog design (in progress - Kotse, ETA: 21-22.IX)
+6) finish catalog design (partially completed, still in progress - Kotse)
 
 7) add a cart functionality to the catalog
 
