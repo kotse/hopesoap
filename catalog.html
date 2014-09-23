@@ -98,21 +98,25 @@
                         <span class="left">Вашата поръчка</span>
                     </p>
 
-                    <div ng-repeat="order in orders">
+                    <div class="order-box-items" ng-repeat="order in orders">
                         <!-- <ul>
                             <li>{{order.name}}</li>
                             <li>{{order.count}} бр.</li>
                             <li>{{order.total}} лв.</li>
                         </ul> -->
                             <span class="left">{{order.name}}</span>
-                            <span class="right">{{order.price}} лв.</span><br/>
-                            <span class="left">{{order.count}} бр.</span>
-                            <span class="right">{{order.total}} лв.</span>
+                            <span class="right">x {{order.price}} лв.</span><br/>
+                            <span class="left">{{order.count}} бр.</span> 
+                            <span class="order-box-quantity left">
+                                <a href='#'><i class='fa fa-minus-square-o'></i></a>
+                                <a href='#'><i class='fa fa-plus-square-o'></i></a>
+                            </span>
+                            <span class="right">= {{order.total}} лв.</span>
                     </div>
 
                     <p class='order-box-total'>
-                        <span class="left">Общо:</span>
-                        <span class="right">13 лв</span>
+                        <span class="left">Общо</span>
+                        <span class="right">= 18 лв</span>
                     </p>
                 </div>
                 <button type="button" class="btn btn-default right">Поръчай</button>
