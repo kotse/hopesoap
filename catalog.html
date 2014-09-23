@@ -64,7 +64,7 @@
                     </p>
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
-                        <label>
+                        <label class=order-box>
                             <input type="checkbox" checked="checked"> {{category}}
                         </label>
                     </div>                
@@ -73,8 +73,8 @@
                         <span class="left">Подреди по</span>
                     </p>
 
-                    <input type="radio" class="sort-by" name="sort" value="price" checked="true"><span class='sort-by-text'>Цена</span><br>
-                    <input type="radio" class="sort-by" name="sort" value="createdAt"><span class='sort-by-text'>Последно добавен</span>
+                    <input type="radio" name="sort" value="price" checked="true"><span>Цена</span><br>
+                    <input type="radio" name="sort" value="createdAt"><span >Последно добавен</span>
                 </div>
             </div>
 
