@@ -16,15 +16,16 @@ HOPeSOAP website
 3. In different console navigate to the project's root and run the HTTP server:
   ```
   > npm start
-  or
+  ```
+ or
+  ```
   > http-server
   ```
+  
 4. You can now go to http:/localhost:8080 and check if it is working.
 
 
 ### TODO ###
-
-1. Make it a proper node project, not just a bunch of html/css
 
 1. Clean up less/css (in progress - Kotse, ongoing)
 
