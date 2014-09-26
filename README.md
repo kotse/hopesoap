@@ -15,7 +15,8 @@ HOPeSOAP website
   ```
 3. In different console navigate to the project's root and run the HTTP server:
   ```
-  
+  > npm start
+  or
   > http-server
   ```
 4. You can now go to http:/localhost:8080 and check if it is working.
