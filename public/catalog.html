@@ -19,7 +19,7 @@
     <link href="css/hopesoap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
@@ -65,7 +65,7 @@
                         <label class=soap-box>
                             <input type="checkbox" checked="checked"> {{category}}
                         </label>
-                    </div>                
+                    </div>
 
                     <p class='soap-box-title'>
                         <span class="left">Подреди по</span>
@@ -107,7 +107,7 @@
                     <div class="soap-box-items" ng-repeat="order in orders">
                         <span class="left">{{order.name}}</span>
                         <span class="right">x {{order.price}} лв.</span><br/>
-                        <span class="left">{{order.count}} бр.</span> 
+                        <span class="left">{{order.count}} бр.</span>
                         <span class="soap-box-quantity left">
                             <a href='#'><i class='fa fa-minus-square-o'></i></a>
                             <a href='#'><i class='fa fa-plus-square-o'></i></a>
@@ -133,16 +133,17 @@
     </footer>
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/dep/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dep/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/dep/jquery.easing.min.js"></script>
 
     <!-- Angular stuff -->
-    <script src="js/angular.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/dep/angular.js"></script>
+
+    <script src="js/app/controllers.js"></script>
 </body>
 </html>

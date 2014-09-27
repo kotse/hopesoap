@@ -6,22 +6,17 @@ HOPeSOAP website
 1. You have to install the following:
  - npm and node.js
  - grunt (`npm install -g grunt`)
- - http-server (`npm install -g http-server`) 
 
 2. Navigate to the project's root and execute:
   ```
   > npm install
   > grunt
   ```
-3. In different console navigate to the project's root and run the HTTP server:
+3. In different console navigate to the project's root and run the Node server:
   ```
   > npm start
   ```
- or
-  ```
-  > http-server
-  ```
-  
+
 4. You can now go to http:/localhost:8080 and check if it is working.
 
 

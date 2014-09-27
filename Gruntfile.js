@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         },
         files: {
           // target.css file: source.less file 
-          "css/hopesoap.css": "less/hopesoap.less",
+          "public/css/hopesoap.css": "less/hopesoap.less",
         }
       }
     },

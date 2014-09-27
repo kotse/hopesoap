@@ -33,7 +33,7 @@ hopesoapApp.controller('SoapListCtrl', function ($scope) {
   $scope.soaps = [
     {'name': 'Luxury',
      'description': 'Луксозни сапуни за вашия специален повод',
-     "imageUrl": "img/soaps/soap1.jpg", 
+     "imageUrl": "img/soaps/soap1.jpg",
  	 'createdAt': new Date('12/23/2013'),
  	 "price": 5},
     {'name': 'Christmas special',
