@@ -1,0 +1,11 @@
+[{
+ 'name': 'Luxury',
+ 'price': 5,
+ 'count': 2,
+ 'total': 10
+},
+{'name': 'Christmas special',
+ 'price': 8,
+ 'count': 1,
+ 'total': 8
+}];
