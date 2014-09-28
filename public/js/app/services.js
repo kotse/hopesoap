@@ -17,9 +17,9 @@ services.service('GetService', ['$http', function($http) {
         return null;
     }
 
-    this.getCategories = request('/js/app/db/categories.json');
+    this.getCategories = request('/db/categories.json');
 
-    this.getOrders = request('/js/app/db/orders.json');
+    this.getOrders = request('/db/orders.json');
 
-    this.getSoaps = request('/js/app/db/soaps.json');
+    this.getSoaps = request('/db/soaps.json');
 }]);
