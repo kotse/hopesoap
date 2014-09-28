@@ -55,34 +55,41 @@
     <section class="content-section">
         <div class="container container-relative">
 
-            <div class="col-md-2 soaps">
-                <div class="soap-box">
-                    <p class='soap-box-title'>
+            <div class="col-md-2">
+                <div class="side-box">
+                    <p class='side-box-title'>
                         <span class="left">Покажи ми</span>
                     </p>
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
-                        <label class=soap-box>
-                            <input type="checkbox" checked="checked"> {{category}}
+                        <label>
+                            <input type="checkbox" checked="checked" value=""> {{category}}
                         </label>
                     </div>
 
-                    <p class='soap-box-title'>
+                    <p class='side-box-title'>
                         <span class="left">Подреди по</span>
                     </p>
 
-                    <label>
-                        <input type="radio" name="sort" value="price" checked="true"><span>Цена</span><br>
-                    </label>
-                    <label>
-                        <input type="radio" name="sort" value="createdAt"><span >Последно добавен</span>
-                    </label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="sort" value="price" checked="true">
+                            <span>Цена</span>
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="sort" value="createdAt"><span >Последно добавен</span>
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-8">
-                <div class='row-fluid'>
-                    <div ng-repeat="soap in soaps" class='soaps'>
+                <div class='row'>
+                    <div ng-repeat="soap in soaps" class='col-md-3'>
+                        <div class="soap rounded-border">
                         <div class="soap-img">
                             <img ng-src="{{soap.imageUrl}}">
                         </div>
@@ -94,28 +101,29 @@
                                 {{soap.price}} лв. - 1 брой
                             </center>
                         </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-2 soaps">
-                <div class="soap-box">
-                    <p class='soap-box-title'>
+            <div class="col-md-2">
+                <div class="side-box">
+                    <p class='side-box-title'>
                         <span class="left">Вашата поръчка</span>
                     </p>
 
-                    <div class="soap-box-items" ng-repeat="order in orders">
+                    <div class="side-box-items" ng-repeat="order in orders">
                         <span class="left">{{order.name}}</span>
-                        <span class="right">x {{order.price}} лв.</span><br/>
+                        <span class="right">x {{order.price}} лв.</span>
                         <span class="left">{{order.count}} бр.</span>
-                        <span class="soap-box-quantity left">
+                        <span class="side-box-quantity left">
                             <a href='#'><i class='fa fa-minus-square-o'></i></a>
                             <a href='#'><i class='fa fa-plus-square-o'></i></a>
                         </span>
                         <span class="right">= {{order.total}} лв.</span>
                     </div>
 
-                    <p class='soap-box-total'>
+                    <p class='side-box-total'>
                         <span class="left">Общо</span>
                         <span class="right">= 18 лв</span>
                     </p>

@@ -1,15 +1,18 @@
 @import "variables.less";
 @import "mixins.less";
 
+@main-green: #008F00;
+
 body {
     width: 100%;
     height: 100%;
     background: url(../img/ricepaper2.png);
 
-    font-family:TisaWebPro,Georgia,"Times New Roman",Times,serif; font-size: 1rem;
-    line-height: 1.5rem;
+    font-family:TisaWebPro,Georgia,"Times New Roman",Times,serif;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
+
+    webkit-tap-highlight-color: fade(@light, 20%);
 }
 
 html {
@@ -36,14 +39,6 @@ p {
     line-height: 1.5;
 }
 
-@media(min-width:767px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-}
-
 a {
     color: @primary;
     -webkit-transition: all .2s ease-in-out;
@@ -59,6 +54,11 @@ a {
 .light {
     font-weight: 400;
     color: @light;
+}
+
+.rounded-border {
+    border: 1px solid @main-green;
+    border-radius: 6px;
 }
 
 .navbar-custom {
@@ -139,63 +139,59 @@ a {
     font-size: 16px;
 }
 
-.soaps {
+.to-left {
     float: left;
     font-size: 14px;
+}
 
-    .soap-box {
-        font-weight: bold;
-        font-size: 12px;
+.side-box {
+    font-weight: bold;
+    font-size: 10pt;
 
-        .soap-box-title {
-            background-color: @background-nav-top;
-            overflow: auto;
-            font-size: 14px;
-            color: #fff;
-            min-width: 150px;
-        }
-
-        .soap-box-items {
-            padding-top: 5px;
-            padding-bottom: 20px;
-        }
-
-        .soap-box-quantity {
-            padding-left: 5px;
-            padding-top: 1px;
-        }
-
-        i {
-            color: black;
-        }
-
-        .soap-box-total {
-            background-color: @background-nav-top;
-            overflow: auto;
-            color: #fff;
-            min-width: 150px;
-        }
-
-        p {
-            padding-right: 10px;
-            padding-left: 5px;
-        }
-
-        .order-item {
-            display: inline;
-            padding: 0px 5px 5px;
-        }
-
-        input[type=checkbox] {
-            margin-top: 2px;
-        }
-
-        input[type=radio] {
-            margin-left: 6px;
-            margin-right: 6px;
-        }
+    .side-box-title {
+        background-color: @background-nav-top;
+        overflow: auto;
+        font-size: 14px;
+        color: #fff;
+        min-width: 150px;
     }
 
+    .side-box-items {
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+    .side-box-quantity {
+        padding-left: 5px;
+        padding-top: 1px;
+    }
+
+    i {
+        color: black;
+    }
+
+    .side-box-total {
+        background-color: @background-nav-top;
+        overflow: auto;
+        color: #fff;
+        min-width: 150px;
+    }
+
+    p {
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    input[type=checkbox] {
+        margin-top: 2px;
+    }
+
+    input[type=radio] {
+    }
+}
+
+.soap {
+    background-color: #FFF;
     .soap-info {
         font-weight: bold;
         margin-top: 10px;
@@ -203,10 +199,8 @@ a {
     }
 
     img {
-        border: solid 1px;
-        margin-right: 15px;
-        width: 180px;
-        height: 120px;
+        width: 100%;
+        height: 100%;
     }
 
     h4 {
@@ -227,27 +221,6 @@ a {
     position: absolute;
     top: 1.25rem;
     right: 0;
-}
-
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        border-bottom: none;
-        letter-spacing: 1px;
-        background: transperant;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-        background-color:@background-nav-top;
-    }
-
-    .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid fade(@light, 30%);
-    }
 }
 
 .intro {
@@ -272,22 +245,6 @@ a {
 
         .intro-text {
             font-size: 18px;
-        }
-    }
-}
-
-@media(min-width:767px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-            .brand-heading {
-                font-size: 100px;
-            }
-
-            .intro-text {
-                font-size: 25px;
-            }
         }
     }
 }
@@ -393,6 +350,7 @@ a {
 }
 
 .btn-default {
+    margin-top: 10px;
     color: @primary;
     background-color: transparent;
     &:hover,
@@ -410,19 +368,6 @@ ul.banner-social-buttons {
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    ul.banner-social-buttons {
-        li {
-            display: block;
-            margin-bottom: 20px;
-            padding: 0;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
     }
 }
 
@@ -453,17 +398,9 @@ img::-moz-selection {
     background: transparent;
 }
 
-body {
-    webkit-tap-highlight-color: fade(@light, 20%);
-}
-
 .about {
     h5 { margin-bottom:0; margin-top:1rem; }
     a { display:block; }
-    img {
-	border: solid 1px #008F00;
-        border-radius: 6px;
-	}
 }
 
 label {
@@ -483,4 +420,57 @@ label {
 .right {
     display: inline;
     float: right;
+}
+
+@media(min-width:767px) {
+    p {
+        margin: 0px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .navbar {
+        padding: 20px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background: transperant;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color:@background-nav-top;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid fade(@light, 30%);
+    }
+
+    ul.banner-social-buttons {
+        li {
+            display: block;
+            margin-bottom: 20px;
+            padding: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .intro {
+        height: 100%;
+        padding: 0;
+
+        .intro-body {
+            .brand-heading {
+                font-size: 100px;
+            }
+
+            .intro-text {
+                font-size: 25px;
+            }
+        }
+    }
 }
