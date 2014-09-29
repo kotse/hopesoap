@@ -83,16 +83,30 @@
             <div class="col-md-8">
                 <div class='row-fluid'>
                     <div ng-repeat="soap in soaps" class='soaps'>
-                        <div class="soap-img">
-                            <img ng-src="{{soap.imageUrl}}">
-                        </div>
-                        <div class="soap-info">
-                            {{soap.name}}
+                        <div class='soap-item'>
+                            <div class="soap-img">
+                                <img ng-src="{{soap.imageUrl}}">
+                            </div>
+                            <div class="soap-info">
+                                {{soap.name}}
+                            </div>
+                            <p>
+                                <center>
+                                    {{soap.price}} лв. - 1 брой
+                                </center>
+                            </p>
+                            <p>
+                                <center>
+                                    {{soap.description}}
+                                </center>
+                            </p>
                         </div>
                         <p>
                             <center>
-                                {{soap.price}} лв. - 1 брой
-                            </center>
+                                <!-- <a href='#'>Добави <i class='fa fa-shopping-cart'></i></a> -->
+                                <button type="button" class="btn btn-default btn-xs">Поръчай</button>
+
+                            <center>
                         </p>
                     </div>
                 </div>
