@@ -93,7 +93,11 @@ a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
-                &:hover,
+                &:hover {
+                    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.5);
+                    color: #FFF;
+                    background-color: transparent;
+                }
                 &:focus,
                 &.active {
                     outline: none;
@@ -230,7 +234,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: @light;
-    background: url(../img/intro-bg-hopesoap.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-bg-hopesoap.jpg) no-repeat bottom center fixed;
     background-color: @background-def;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -433,7 +437,7 @@ label {
         padding: 20px 0;
         border-bottom: none;
         letter-spacing: 1px;
-        background: transperant;
+        background: rgba(255, 255, 255, 0.3);
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -442,6 +446,15 @@ label {
     .top-nav-collapse {
         padding: 0;
         background-color:@background-nav-top;
+
+        .nav {
+            a {
+                &:hover {
+                    outline: none;
+                    background-color: fade(@light, 30%);
+                }
+            }
+        }
     }
 
     .navbar-custom.top-nav-collapse {
