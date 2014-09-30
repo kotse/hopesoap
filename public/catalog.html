@@ -63,7 +63,7 @@
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
                         <label>
-                            <input type="checkbox" checked="checked" value=""> {{category}}
+                            <input type="checkbox" checked="checked"> {{category}}
                         </label>
                     </div>
 
@@ -90,17 +90,28 @@
                 <div class='row'>
                     <div ng-repeat="soap in soaps" class='col-md-3'>
                         <div class="soap rounded-border">
-                        <div class="soap-img">
-                            <img ng-src="{{soap.imageUrl}}">
-                        </div>
-                        <div class="soap-info">
-                            {{soap.name}}
-                        </div>
-                        <p>
-                            <center>
-                                {{soap.price}} лв. - 1 брой
-                            </center>
-                        </p>
+                            <div class="soap-img">
+                                <img ng-src="{{soap.imageUrl}}">
+                            </div>
+                            <div class="soap-info">
+                                {{soap.name}}
+                            </div>
+                            <p>
+                                <center>
+                                    {{soap.price}} лв. - 1 брой
+                                </center>
+                            </p>
+                            <p>
+                                <center>
+                                    {{soap.description}}
+                                </center>
+                            </p>
+                            <p>
+                                <center>
+                                    <!-- <a href='#'>Добави <i class='fa fa-shopping-cart'></i></a> -->
+                                    <button type="button" class="btn btn-default btn-xs">Поръчай</button>
+                                <center>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -111,12 +122,11 @@
                     <p class='side-box-title'>
                         <span class="left">Вашата поръчка</span>
                     </p>
-
                     <div class="side-box-items" ng-repeat="order in orders">
                         <span class="left">{{order.name}}</span>
                         <span class="right">x {{order.price}} лв.</span>
                         <span class="left">{{order.count}} бр.</span>
-                        <span class="side-box-quantity left">
+                        <span class="side-box-quantity">
                             <a href='#'><i class='fa fa-minus-square-o'></i></a>
                             <a href='#'><i class='fa fa-plus-square-o'></i></a>
                         </span>
