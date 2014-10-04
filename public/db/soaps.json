@@ -1,5 +1,6 @@
 [
     {
+         "id": 1,
          "name": "Luxury",
          "description": "Луксозни сапуни за вашия специален повод",
          "imageUrl": "img/soaps/soap1.jpg",
@@ -7,6 +8,7 @@
          "price": 5
     },
     {
+         "id": 2,
          "name": "Christmas special",
          "description": "Коледа",
          "imageUrl": "img/soaps/soap2.jpg",
@@ -14,38 +16,11 @@
          "price": 8
     },
     {
+         "id": 3,
          "name": "Classic",
          "description": "Класически модели сапуни",
          "imageUrl": "img/soaps/soap2.jpg",
          "createdAt": "07/08/2014",
          "price": 1
-    },
-    {
-         "name": "Classic",
-         "description": "Класически модели сапуни",
-         "imageUrl": "img/soaps/soap2.jpg",
-         "createdAt": "07/08/2014",
-         "price": 1
-    },
-    {
-        "name": "Classic",
-        "description": "Класически модели сапуни",
-        "imageUrl": "img/soaps/soap2.jpg",
-        "createdAt": "07/08/2014",
-        "price": 1
-    },
-    {
-        "name": "Classic",
-        "description": "Класически модели сапуни",
-        "imageUrl": "img/soaps/soap2.jpg",
-        "createdAt": "07/08/2014",
-        "price": 1
-    },
-    {
-        "name": "Classic",
-        "description": "Класически модели сапуни",
-        "imageUrl": "img/soaps/soap2.jpg",
-        "createdAt": "07/08/2014",
-        "price": 1
     }
 ]

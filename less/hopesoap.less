@@ -226,7 +226,7 @@ a {
     img {
         width: 100%;
         height: 100%;
-        border-radius: @round;
+        border-radius: @round-inner;
     }
 
     h4 {
@@ -454,6 +454,10 @@ label {
     float: right;
 }
 
+.order-box {
+    display: none;
+}
+
 @media(min-width:767px) {
     p {
         margin: 0px;
@@ -483,10 +487,6 @@ label {
                 }
             }
         }
-    }
-
-    .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid fade(@light, 30%);
     }
 
     ul.banner-social-buttons {

@@ -91,9 +91,8 @@
                 <div class='row'>
                     <div ng-repeat="soap in soaps" class='col-md-3'>
                         <div class="soap rounded-border">
-                            <div class="soap-img">
-                                <img ng-src="{{soap.imageUrl}}">
-                            </div>
+                            <img ng-src="{{soap.imageUrl}}">
+                            
                             <div class="soap-info">
                                 {{soap.name}}
                             </div>
@@ -109,7 +108,7 @@
                             </p>
                             <p>
                                 <center>
-                                    <button type="button" class="btn btn-default btn-xs">Поръчай</button>
+                                    <button type="button" class="btn btn-default btn-xs" ng-click="addOrder(soap)">Поръчай</button>
                                 <center>
                             </p>
                         </div>
@@ -118,23 +117,23 @@
             </div>
 
             <div class="col-md-2">
-                <div class="side-box side-box-container">
+                <div class="side-box side-box-container order-box">
                     <p class='side-box-title'>
                         <span class="left">Вашата поръчка</span>
                     </p>
                     <div class="side-box-items" ng-repeat="order in orders">
-                        <span class="left">{{order.name}}</span>
-                        <span class="right">x {{order.price}} лв.</span>
+                        <span class="left">{{order.soap.name}}</span>
+                        <span class="right">x {{order.soap.price}} лв.</span>
                         <span class="left">{{order.count}} бр.</span>
                         <span class="side-box-quantity">
-                            <a href='#'><i class='fa fa-minus-square-o'></i></a>
-                            <a href='#'><i class='fa fa-plus-square-o'></i></a>
+                            <a href='#' ng-click="subFromOrder(order)"><i class='fa fa-minus-square-o'></i></a>
+                            <a href='#' ng-click="addToOrder(order)"><i class='fa fa-plus-square-o'></i></a>
                         </span>
                         <span class="right last">= {{order.total}} лв.</span>
                     </div>
                     <p class='side-box-total side-box-container'>
                         <span class="left">Общо</span>
-                        <span class="right">= 18 лв</span>
+                        <span class="right">= {{total}} лв</span>
                     </p>
                     <button type="button" class="btn btn-default right">Поръчай</button>
                 </div>
