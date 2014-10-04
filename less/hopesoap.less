@@ -6,7 +6,7 @@ body {
     height: 100%;
     background: url(../img/ricepaper2.png);
 
-    font-family:TisaWebPro,Georgia,"Times New Roman",Times,serif;
+    font-family:@font-family-body;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 
@@ -26,7 +26,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -62,7 +62,7 @@ a {
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid fade(@light, 30%);
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     .navbar-brand {
         font-weight: 700;
         &:focus {
@@ -111,7 +111,7 @@ a {
 }
 
 .navbar-right-custom {
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     font-weight: 700;
     font-size: 16px;
 }
@@ -124,7 +124,7 @@ a {
     border-radius: 5px;
     box-shadow: 5px 5px 5px #888888;
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -136,7 +136,7 @@ a {
 .catalog-item {
     img { border: solid 1px;}
 
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     font-weight: 700;
     font-size: 16px;
 }
@@ -155,7 +155,7 @@ a {
     font-size: 14px;
 
     .side-box-title {
-        background-color: @background-nav-top;
+        background-color: @background-menus;
         overflow: auto;
         font-size: 16px;
         color: #fff;
@@ -181,7 +181,7 @@ a {
     }
 
     .side-box-total {
-        background-color: @background-nav-top;
+        background-color: @background-menus;
         overflow: auto;
         color: #fff;
         font-size: 16px;
@@ -369,7 +369,7 @@ a {
 
 .btn {
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @font-family-menus;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -468,7 +468,7 @@ label {
 
     .top-nav-collapse {
         padding: 0;
-        background-color:@background-nav-top;
+        background-color:@background-menus;
 
         .nav {
             a {
