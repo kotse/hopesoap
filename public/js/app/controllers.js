@@ -66,7 +66,7 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
     }
 
     $scope.checkOrdersAreVisible = function() {
-    	if ($scope.total > 0) {
+    	if ($scope.orders.length > 0) {
 	    	$('.order-box').slideDown();	
     	} else {
     		$('.order-box').slideUp();	
