@@ -63,7 +63,7 @@
 
                     <div class="checkbox checkbox-categories" ng-repeat="category in categories">
                         <label>
-                            <input type="checkbox" checked="checked"> {{category}}
+                            <input type="checkbox" ng-model="filter[category]" ng-init="filter[category]=true" checked="checked"> {{category}}
                         </label>
                     </div>
 
@@ -89,7 +89,7 @@
 
             <div class="col-md-8">
                 <div class='row'>
-                    <div ng-repeat="soap in soaps | orderBy:orderByProp" class='col-md-3'>
+                    <div ng-repeat="soap in soaps | filter:filterByCategory | orderBy:orderByProp" class='col-md-3'>
                         <div class="soap rounded-border">
                             <img ng-src="{{soap.imageUrl}}">
                             

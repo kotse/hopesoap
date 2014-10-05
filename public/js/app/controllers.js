@@ -12,6 +12,17 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
         $scope.soaps = data;
     });
 
+    //holding the state of category filters
+    $scope.filter = {};
+    $scope.filterByCategory = function (soap) {
+        var display = true;
+        if (!$scope.filter[soap.category]) {
+            display = false;
+        }
+        return display;
+    }
+
+    //order by property is price by default
     $scope.orderByProp = "price";
 	$scope.total = 0;
 	$scope.orders = [];
