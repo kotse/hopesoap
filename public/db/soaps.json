@@ -4,7 +4,7 @@
          "name": "Luxury",
          "description": "Луксозни сапуни за вашия специален повод",
          "imageUrl": "img/soaps/soap1.jpg",
-         "createdAt": "12/23/2013",
+         "createdAt": 1412494925271,
          "price": 5
     },
     {
@@ -12,7 +12,7 @@
          "name": "Christmas special",
          "description": "Коледа",
          "imageUrl": "img/soaps/soap2.jpg",
-         "createdAt": "11/24/2013",
+         "createdAt": 1412490925051,
          "price": 8
     },
     {
@@ -20,7 +20,7 @@
          "name": "Classic",
          "description": "Класически модели сапуни",
          "imageUrl": "img/soaps/soap2.jpg",
-         "createdAt": "07/08/2014",
+         "createdAt": 1412494925279,
          "price": 1
     }
 ]

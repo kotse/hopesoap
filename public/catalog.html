@@ -73,14 +73,14 @@
 
                     <div class="radio">
                         <label>
-                            <input type="radio" name="sort" value="price" checked="true">
+                            <input type="radio" name="sort" ng-model="orderByProp" value="price" checked="true">
                             <span class="radio-label">Цена</span>
                         </label>
                     </div>
 
                     <div class="radio">
                         <label>
-                            <input type="radio" name="sort" value="createdAt">
+                            <input type="radio" name="sort" ng-model="orderByProp" value="createdAt">
                             <span class="radio-label">Последно добавен</span>
                         </label>
                     </div>
@@ -89,7 +89,7 @@
 
             <div class="col-md-8">
                 <div class='row'>
-                    <div ng-repeat="soap in soaps" class='col-md-3'>
+                    <div ng-repeat="soap in soaps | orderBy:orderByProp" class='col-md-3'>
                         <div class="soap rounded-border">
                             <img ng-src="{{soap.imageUrl}}">
                             

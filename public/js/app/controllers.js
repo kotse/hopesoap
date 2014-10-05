@@ -12,6 +12,7 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
         $scope.soaps = data;
     });
 
+    $scope.orderByProp = "price";
 	$scope.total = 0;
 	$scope.orders = [];
 
