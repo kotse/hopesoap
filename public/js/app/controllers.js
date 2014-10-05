@@ -16,11 +16,11 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
 	$scope.orders = [];
 
     $scope.addOrder = function (soap) {
-    	var order = $scope.findOrderFor(soap);
-    	if (order) {
-    		$scope.addToOrder(order);
+    	var orderIndex = $scope.findOrderIndex(soap);
+    	if (orderIndex > -1) {
+    		$scope.addToOrder($scope.orders[orderIndex]);
     	} else {
-    		order = {};
+    		var order = {};
 
 	    	order.soap = soap;
 	    	order.count = 1;
@@ -30,15 +30,20 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
 	    	$scope.total += soap.price;
     	}
 
-    	$scope.checkOrderIsVisible();
+    	$scope.checkOrdersAreVisible();
     };
 
     $scope.subFromOrder = function (order) {
 		order.count -= 1;
-    	order.total -= order.soap.price;
+		order.total -= order.soap.price;
+
+		if (order.count == 0) {
+			var orderIndex = $scope.findOrderIndex(order.soap);
+			$scope.orders.splice(orderIndex, 1);
+		}
 
     	$scope.total -= order.soap.price;
-    	$scope.checkOrderIsVisible();
+    	$scope.checkOrdersAreVisible();
     }
 
     $scope.addToOrder = function (order) {
@@ -48,18 +53,19 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
     	$scope.total += order.soap.price;
     }
 
-    $scope.findOrderFor = function (soap) {
-    	for (var i=0; i<$scope.orders.length; i++) {
+    $scope.findOrderIndex = function (soap) {
+		for (var i=0; i<$scope.orders.length; i++) {
     		var order = $scope.orders[i];
+
     		if (soap.id == order.soap.id) {
-	    		return order;
+    			return i;
     		}
     	}
 
-    	return false;
+    	return -1;
     }
 
-    $scope.checkOrderIsVisible = function() {
+    $scope.checkOrdersAreVisible = function() {
     	if ($scope.total > 0) {
 	    	$('.order-box').slideDown();	
     	} else {
