@@ -1,7 +1,7 @@
 [
     {
          "id": 1,
-         "name": "Luxury",
+         "name": "Луксозен сапун с гъба лува",
          "category": "Луксозни",
          "description": "Луксозни сапуни за вашия специален повод",
          "imageUrl": "img/soaps/soap1.jpg",
@@ -10,7 +10,7 @@
     },
     {
          "id": 2,
-         "name": "Christmas special",
+         "name": "Сапун - Коледно дръвче",
          "category": "Коледни",
          "description": "Коледа",
          "imageUrl": "img/soaps/soap2.jpg",
@@ -19,11 +19,38 @@
     },
     {
          "id": 3,
-         "name": "Classic",
+         "name": "Класически ароматен сапун",
          "category": "Kласически",
          "description": "Класически модели сапуни",
          "imageUrl": "img/soaps/soap2.jpg",
-         "createdAt": 1412494925279,
-         "price": 1
+         "createdAt": 1412494925299,
+         "price": 11
+    },
+    {
+         "id": 4,
+         "name": "Луксозен сапун с арганово масло",
+         "category": "Луксозни",
+         "description": "Луксозни сапуни за вашия специален повод",
+         "imageUrl": "img/soaps/soap2.jpg",
+         "createdAt": 1412494925300,
+         "price": 10
+    },
+    {
+         "id": 5,
+         "name": "Луксозен сапун със сухи цветя",
+         "category": "Луксозни",
+         "description": "Луксозни сапуни за вашия специален повод",
+         "imageUrl": "img/soaps/soap2.jpg",
+         "createdAt": 1412494925301,
+         "price": 9
+    },
+    {
+         "id": 6,
+         "name": "Сърце",
+         "category": "Специални случаи",
+         "description": "За вашия специален повод",
+         "imageUrl": "img/soaps/soap2.jpg",
+         "createdAt": 1412494925501,
+         "price": 4
     }
 ]
