@@ -32,7 +32,7 @@
 
 </head>
 
-<body ng-app="hopeSoap" ng-controller="SoapListCtrl" data-target=".navbar-fixed-top">
+<body ng-app="hopeSoap" ng-controller="SoapListCtrl" initialisation data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
@@ -90,7 +90,7 @@
             <div class="col-md-8">
                 <div class='row'>
                     <div ng-repeat="soap in soaps | filter:filterByCategory | orderBy:orderByProp" class='col-md-3'>
-                        <div class="soap rounded-border">
+                        <div class="soap rounded-border soap-item">
                             <img ng-src="{{soap.imageUrl}}">
                             
                             <div class="soap-info">

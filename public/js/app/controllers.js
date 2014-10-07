@@ -84,4 +84,17 @@ controllers.controller('SoapListCtrl', ['$scope', 'GetService', function ($scope
     		$('.order-box').slideUp();	
     	}
     }
+
+    $scope.$on("initialised", function() {
+		var max_height = 0;
+    	$(".soap-item").each(function(item) { 
+            // vat h = $(this).height();
+            var h = this.clientHeight;
+			if (h > max_height) {
+				max_height = h;
+			}
+        });
+		
+		$(".soap-item").height(max_height);
+    });
 }]);
