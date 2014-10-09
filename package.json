@@ -8,7 +8,12 @@
     "start": "node web.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "express": "~4.9.x", 
+	"mongodb" : "*",
+	"busboy" : "*",
+	"body-parser" : "*",
+	"fs" : "*",
+	"morgan" : ""
   },
   "engines": {
     "node": "0.10.x"
