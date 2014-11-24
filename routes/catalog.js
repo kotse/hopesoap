@@ -5,6 +5,15 @@ var Busboy = require('busboy');
 var os = require('os');
 var fs = require('fs');	
 
+function requiredAuthentication(req, res, next) {
+    if (req.session.user) {
+        next();
+    } else {
+        req.session.error = 'Access denied!';
+        res.redirect('/login.html');
+    }
+}
+
 //the url with param in it should be before the generic one, it doesn't work the other way
 router.get('/soaps/:id', function(req, res) {
 	var db = req.db;
@@ -37,7 +46,11 @@ router.get('/soaps', function(req, res) {
 
 });
 
-router.post('/soaps', function(req, res) {
+router.get('/admin', requiredAuthentication, function(req, res){
+	res.redirect('/admin.html');
+});
+
+router.post('/soaps', requiredAuthentication, function(req, res) {
 	var db = req.db;
 	console.log(req.body);
 	var soap = req.body
@@ -55,7 +68,7 @@ router.post('/soaps', function(req, res) {
 
 });
 
-router.delete('/soaps/:id', function(req, res) {
+router.delete('/soaps/:id', requiredAuthentication, function(req, res) {
 	var id = req.params.id;
 	console.log('Deleting soap: ' + id);
 	var db = req.db;
@@ -73,7 +86,7 @@ router.delete('/soaps/:id', function(req, res) {
 });
 
 
-router.post('/soap/upload', function(req, res) {
+router.post('/soap/upload', requiredAuthentication, function(req, res) {
     uploadFile(req, res);
 	res.redirect('/../admin.html');
 });
@@ -103,12 +116,11 @@ function saveSoap(req, res, soap) {
 	var db = req.db;	
 	db.collection('soaps', function(err, collection) {
 		collection.insert(soap, {safe:true}, function(err, result) {
-		if (err) {
-			res.send({'error':'An error has occurred'});
-		} else {
-			console.log('Success: ' + JSON.stringify(result[0]));
-			//res.send(result[0]);
-		}
+			if (err) {
+				res.send({'error':'An error has occurred'});
+			} else {
+				console.log('Success: ' + JSON.stringify(result[0]));
+			}
 		});
 	});
 
